@@ -1,0 +1,123 @@
+.footer {    
+    position:relative;   
+ 
+    
+    &__container {
+        padding-bottom: 30px;
+        display:flex;
+        flex-direction:column;  
+        
+        @include sm {    
+            
+            display: grid;
+            grid-template-columns: max-content 1fr max-content;         
+            
+            grid-template-areas:
+                'logo . social'
+                'copyright . developers';                ;
+        }  
+        
+        @include md {    
+            padding-bottom: 50px;
+            font-size: 20px;
+        }
+    }
+    
+    &__logo {
+        grid-area:logo;
+        margin-bottom: 32px;
+        width: 200px;
+        height: 32px;
+        
+        @include sm {    
+            margin-bottom: 41px;            
+        }
+        
+        @include md {    
+            width: 360px;
+            height: 56px;
+            margin-bottom: 72px;
+        }
+    }
+    
+    &__social-list {
+        grid-area: social;
+        display:flex;
+        flex-direction: row;
+        gap:16px;
+        margin-bottom: 52px;
+        
+        @include sm {    
+            margin-bottom: 41px;            
+        }
+        @include md {    
+            margin-bottom: 72px;
+            gap:36px;
+        }
+    }
+   
+    &__social-item {        
+        width: 36px;
+        height: 36px;
+        
+        @include md {    
+            width: 50px;
+            height: 50px;
+        }
+    }
+    
+  
+    &__developers {
+        grid-area: developers;
+        display:flex;
+        flex-direction: column;
+        gap:19px;
+        margin-bottom: 52px;
+        
+        &:last-child {
+            gap:0px; 
+        }
+        
+        @include sm {    
+            margin-bottom: 0px;
+        }
+        
+        @include md {    
+            margin-bottom: 0;
+            gap:16px;
+        }        
+
+    }
+   
+ 
+    &__copyright {
+        grid-area: copyright;
+        
+        @include sm {    
+            margin-bottom: 0px;
+        }
+    }
+    
+    &__up-link {  
+        grid-area: uplink;  
+        position:absolute;
+        z-index:10;
+        right: 18px;
+        bottom: 0;
+        display: block;
+        background-color: $second;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        padding:12px;
+        
+        @include md {  
+            bottom: 30px;
+            right: 32px;  
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+    
+
