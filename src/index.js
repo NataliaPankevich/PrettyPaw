@@ -3,6 +3,35 @@ import './index.html';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import './index.scss';
+import { slidersInit } from './modules/sliders';
+
+
+
+slidersInit('.about__slider', {
+    pagination:{
+        el:'.about__slider-pagination',
+    },
+})
+slidersInit('.career__slider', {
+    pagination:{
+        el:'.career__slider-pagination',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 3,            
+        },
+        1024: {            
+            spaceBetween: 26,
+        },
+        1440: {   
+            slidesPerView: 4,                     
+            spaceBetween: 30,
+        },
+    },
+})
 
 const videoBg = document.querySelector('.video-bg');
 videoBg.innerHTML = `

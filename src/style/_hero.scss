@@ -79,26 +79,13 @@
         font-size: 20px;
         line-height: 1;
         text-transform: uppercase;
-        color: $second;
-        
-        @include sm {
-            
-        }
-        @include md {
-            
-        }
+        color: $second;        
+      
                         
         @include lg {
-            font-size: 40px;
-            
+            font-size: 40px;            
         }
-        
-        @include xl {
-            
-        }
-        @include xxl {
-            
-        }
+
 }
     
     &::before {
